@@ -30,7 +30,7 @@ class GatewayTestActivity : AppCompatActivity() {
         val scroll = ScrollView(this)
         val layout = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
-            padding = 48
+            setPadding(48, 48, 48, 48)
         }
 
         val title = TextView(this).apply {
@@ -143,7 +143,7 @@ class GatewayTestActivity : AppCompatActivity() {
     }
 
     private fun onCheckClicked() {
-        val paymentId = tvResult.text.toString().linesOrEmpty().firstOrNull { it.startsWith("Payment ID:") }
+        val paymentId = tvResult.text.toString().split("\n").firstOrNull { it.startsWith("Payment ID:") }
             ?.removePrefix("Payment ID: ")?.trim()
         if (paymentId.isNullOrEmpty()) {
             Toast.makeText(this, "No payment to check", Toast.LENGTH_SHORT).show()
