@@ -12,7 +12,7 @@
     <application
         android:allowBackup="false"
         android:label="Gateway Test"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@android:drawable/ic_dialog_info"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
         android:usesCleartextTraffic="true">
 
